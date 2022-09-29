@@ -74,3 +74,33 @@ const torusKnotMaterial = new THREE.MeshPhongMaterial( { color: 0xC70039  } );
 const torusKnot = new THREE.Mesh( torusKnotGeometry, torusKnotMaterial );
 torusKnot.rotation.set(0.3, 2.9, 0);
 scene.add( torusKnot );
+
+//Criando oo círculo
+const circuloGeometry = new THREE.SphereGeometry( 5, 32, 20 );
+const circuloMaterial = new THREE.ShaderMaterial( {
+
+	uniforms: {},
+
+	vertexShader: _VS,
+
+	fragmentShader: _FS
+
+} );
+const circulo = new THREE.Mesh( circuloGeometry, circuloMaterial );
+scene.add( circulo );
+
+// Criação do retângulo
+const retanguloGeometry = new THREE.BoxGeometry( 1, 2, 1 );
+const retanguloMaterial = new THREE.ShaderMaterial( {
+
+	uniforms: {colorA: {type: 'vec3', value: new THREE.Color(0xFFC300)},
+               colorB: {type: 'vec3', value: new THREE.Color(0xC70039)}
+            },
+
+	vertexShader: _VS2,
+
+	fragmentShader: _FS2
+
+} );
+const retangulo = new THREE.Mesh( retanguloGeometry, retanguloMaterial );
+scene.add( retangulo );
