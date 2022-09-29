@@ -104,3 +104,30 @@ const retanguloMaterial = new THREE.ShaderMaterial( {
 } );
 const retangulo = new THREE.Mesh( retanguloGeometry, retanguloMaterial );
 scene.add( retangulo );
+
+// Translação do objeto
+circulo.translateX(23);
+torusKnot.translateX(30);
+retangulo.translateX(60);
+
+// Escala do objeto
+circulo.scale.set(2, 2, 2);
+torusKnot.scale.set(1, 1, 1);
+retangulo.scale.set(9, 9, 9);
+
+
+// rotação do objeto
+circulo.rotation.set(0, 1, 1);
+torusKnot.rotation.set(0, 1, 1);
+retangulo.rotation.set(1, 1, 0);
+
+
+// Função que move o objeto para cima
+
+function moveObjectUp(obj) {
+	obj.position.y += 0.8;	
+
+	if (obj.position.y >= 40) {
+		obj.position.y = obj.position.y - 35;
+	}
+}
