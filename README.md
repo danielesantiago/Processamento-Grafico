@@ -15,7 +15,7 @@ Criar e visualizar uma cena 3D, mapeando os conceitos estudados na disciplina.
 
 ## Especificações e Implementações
 * O projeto foi construído a partir da biblioteca three.js;
-* Foram criados dois objetos gráficos tridimensionais a partir dos métodos Geometry (TorusKnotGeometry e SphereGeometry), onde customizamos cada parâmetro como cor, vértices, etc;
+* Foram criados três objetos gráficos tridimensionais a partir dos métodos Geometry (TorusKnotGeometry, SphereGeometry e BoxGeometry), onde customizamos cada parâmetro como cor, vértices, etc;
 * Os objetos foram renderizados em conjunto com a cena;
 * Os objetos foram inseridos na cena e houve transformação (translação, rotação e escala) dos mesmos;
 * Houve a implementação de dois movimentos simples;
