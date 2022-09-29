@@ -131,3 +131,24 @@ function moveObjectUp(obj) {
 		obj.position.y = obj.position.y - 35;
 	}
 }
+
+// Função que move o objeto em sua direção
+function moveObjectFoward(obj) {
+	obj.position.z += 0.8;
+
+	if (obj.position.z >= 40) {
+		obj.position.z = obj.position.y - 35;
+	}
+}
+
+
+
+// Função de animação do objeto
+function animate() {
+	requestAnimationFrame( animate );
+	renderer.render( scene, camera );
+	moveObjectUp(circulo);
+	moveObjectFoward(torusKnot);
+	moveObjectFoward(retangulo);
+}
+animate();
